@@ -11,6 +11,13 @@ impl Server {
     }
     pub fn run(self) {
         println!("Listening on {}", self.addr);
-        let listener = TcpListener::bind(&self.addr);
+        let listener = TcpListener::bind(&self.addr).unwrap();
+        
+        // For loop annotations, we can use loop naming
+        // 'outer: loop{
+        //     loop{
+        //         break 'outer;
+        //     }
+        //}
     }
 }
